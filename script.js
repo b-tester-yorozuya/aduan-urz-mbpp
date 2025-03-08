@@ -29,7 +29,6 @@ document.getElementById("complaintForm").addEventListener("submit", function(e) 
     roadName: document.getElementById("roadName").value,
     imageUrl: "IMAGE_LINK_IF_AVAILABLE"
   })
-})
 .then(response => response.json()) // Convert response to JSON
 .then(data => alert(data.message)) // Show success message
 .catch(error => console.error("Error:", error));
