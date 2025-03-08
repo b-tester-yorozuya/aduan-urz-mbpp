@@ -19,12 +19,16 @@ document.getElementById("complaintForm").addEventListener("submit", function(e) 
 
         fetch("https://script.google.com/macros/s/AKfycbz5W0YhzKa6cTPMBFbhgLHKuPCVMbxrJvB0dulbRSzQ948bAqvssVY0RbOCk55Aazxu/exec", {
             method: "POST",
+            body: formData,
+            mode: "no-cors" //Prevents CORS blocking
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json" }
         })
+        .then(() => alert("Berjaya"))
+        .catch(error => console.error("Error:" error));
         .then(response => response.text())
         .then(data => {
-            alert("Complaint submitted successfully!");
+            alert("Berjaya Dihantar!");
             document.getElementById("complaintForm").reset();
         })
         .catch(error => console.error("Error:", error));
