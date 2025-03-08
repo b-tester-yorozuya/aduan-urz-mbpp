@@ -21,14 +21,9 @@ document.getElementById("complaintForm").addEventListener("submit", function(e) 
             method: "POST",
             body: formData,
             mode: "no-cors" //Prevents CORS blocking
-            body: JSON.stringify(data),
-            headers: { "Content-Type": "application/json" }
-        })
+                
         .then(() => alert("Berjaya"))
         .catch(error => console.error("Error:" error));
-        .then(response => response.text())
-        .then(data => {
-            alert("Berjaya Dihantar!");
             document.getElementById("complaintForm").reset();
         })
         .catch(error => console.error("Error:", error));
