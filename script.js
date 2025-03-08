@@ -34,7 +34,7 @@ document.getElementById("complaintForm").addEventListener("submit", function(e) 
 .catch(error => console.error("Error:", error))
 .then(response => response.json()) // Convert response to JSON
 .then(data => alert(data.message)) // Show success message
-.catch(error => console.error("Error:", error));
+.catch(error => console.error("Error:", error))
 
     if (file) {
         reader.readAsDataURL(file);
