@@ -28,8 +28,7 @@ document.getElementById("complaintForm").addEventListener("submit", function(e) 
     description: document.getElementById("description").value,
     roadName: document.getElementById("roadName").value,
     imageUrl: "IMAGE_LINK_IF_AVAILABLE"
-  })
-}) // Removed extra closing parenthesis
+  })// Removed extra closing parenthesis
 .then(response => response.json())
 .then(data => alert(data.message))
 .catch(error => console.error("Error:", error));
